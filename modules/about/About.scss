@@ -1,0 +1,193 @@
+.about {
+  padding: 8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  background-color: $black_color;
+  .about_left {
+    @include displayCenter(center, center);
+    .about_profile {
+      background-color: $brand_color;
+      height: 400px;
+      width: 500px;
+      clip-path: polygon(0 0, 51% 100%, 100% 0);
+    }
+  }
+  .about_right {
+    @include displayCenter(flex-start, center);
+    flex-direction: column;
+    margin-top: -60px;
+    // background-color: red;
+    h1 {
+      font-size: 50px;
+      color: $white_color;
+      &:hover {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5),
+          -4px -4px 8px rgba(255, 255, 255, 0.8);
+      }
+      span {
+        color: $brand_color;
+      }
+    }
+    h3 {
+      font-size: 25px;
+      color: $white_color;
+      margin-top: 10px;
+      max-width: 600px;
+    }
+    p {
+      font-size: 20px;
+      color: $white_color;
+      margin-top: 10px;
+      max-width: 600px;
+      height: 180px;
+      // background-color: green;
+      overflow-y: scroll;
+      span {
+        span {
+          .about_text_heading {
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    // .btn {
+    //   width: 180px;
+    //   height: 60px;
+    //   cursor: pointer;
+    //   background: transparent;
+    //   border: 1px solid #91c9ff;
+    //   outline: none;
+    //   transition: 1s ease-in-out;
+    // }
+
+    // svg {
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   fill: none;
+    //   stroke: #fff;
+    //   stroke-dasharray: 150 480;
+    //   stroke-dashoffset: 150;
+    //   transition: 1s ease-in-out;
+    // }
+
+    // .btn:hover {
+    //   transition: 1s ease-in-out;
+    //   background: #4f95da;
+    // }
+
+    // .btn:hover svg {
+    //   stroke-dashoffset: -480;
+    // }
+
+    // .btn span {
+    //   color: white;
+    //   font-size: 18px;
+    //   font-weight: 100;
+    // }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background-color: $brand_color;
+      border-radius: 0.6rem;
+      box-shadow: $box_shadow;
+      font-size: 1.2rem;
+      color: $white_color;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      transition: 0.5s ease;
+      border: 1px solid $brand_color;
+      margin-top: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: transparent;
+        color: $brand_color;
+      }
+    }
+  }
+}
+
+// .about {
+//   height: 100vh;
+//   background-color: $black_color;
+//   @include displayCenter(center, space-between);
+//   padding: 10rem 7% 2rem;
+//   .about_left {
+//     background-color: $brand_color;
+//     height: 450px;
+//     width: 500px;
+//     clip-path: polygon(0 0, 51% 100%, 100% 0);
+//     // box-shadow: 0 8px 8px -4px lightblue;
+//   }
+//   .about_right {
+//     width: 600px;
+//     margin-bottom: 100px;
+//     h1 {
+//       font-size: 50px;
+//       color: $white_color;
+//       span {
+//         color: $brand_color;
+//       }
+//     }
+//     h3 {
+//       font-size: 25px;
+//       color: $white_color;
+//       margin-top: 10px;
+//     }
+//     p {
+//       font-size: 20px;
+//       color: $white_color;
+//       margin-top: 10px;
+//     }
+//     .btn {
+//       display: inline-block;
+//       padding: 1rem 2.5rem;
+//       background-color: $brand_color;
+//       border-radius: 0.6rem;
+//       box-shadow: 0 0.2rem 0.5rem $shadow_color;
+//       font-size: 1.2rem;
+//       color: $white_color;
+//       letter-spacing: 0.1rem;
+//       font-weight: 600;
+//       transition: 0.5s ease;
+//       border: 1px solid $brand_color;
+//       margin-top: 30px;
+//       &:hover {
+//         background-color: transparent;
+//         color: $brand_color;
+//       }
+//     }
+//   }
+// }
+
+@media screen and (max-width: $md) {
+  .about {
+    @include displayCenter(center, center);
+    padding: 2rem;
+    .about_left {
+      display: none;
+    }
+    .about_right {
+      margin-top: 250px;
+      @include displayCenter(center, center);
+      padding-bottom: 5rem;
+      p {
+        max-width: 500px;
+        height: 220px;
+      }
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+  .about {
+    .about_right {
+      p {
+        max-width: 350px;
+        height: 300px;
+      }
+    }
+  }
+}

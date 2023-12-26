@@ -1,0 +1,26 @@
+.footer {
+  background-color: $brand_color;
+  .footer_top {
+    @include displayCenter(center, center);
+    gap: 30px;
+    padding: 0.5rem;
+    .social_link_icon {
+      @include displayCenter(center, flex-start);
+      font-size: 35px;
+      color: $white_color;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      box-shadow: $box_shadow;
+    }
+  }
+  hr {
+    color: $white_color;
+  }
+  .footer_bottom {
+    padding: 0.5rem;
+    @include displayCenter(center, center);
+    font-size: 16px;
+    color: $white_color;
+  }
+}

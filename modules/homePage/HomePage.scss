@@ -1,0 +1,131 @@
+.homepage {
+  height: 100vh;
+  width: 100%;
+  padding: 0 8rem;
+  @include displayCenter(center, space-between);
+  background-color: $black_color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  top: -80px;
+  .homepage_left {
+    @include displayCenter(flex-start, center);
+    flex-direction: column;
+    h3 {
+      font-size: 2rem;
+      animation-name: hello;
+      animation-duration: 1s;
+      color: $white_color;
+    }
+    h1 {
+      font-size: 3.5rem;
+      animation: name 1.5s ease-in;
+      color: $white_color;
+    }
+    .home_content {
+      font-size: 1.5rem;
+      color: $white_color;
+      max-width: 600px;
+    }
+    .social_media {
+      .social_media_icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        border: 0.2rem solid $brand_color;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        box-shadow: 0 0.2rem 0.5rem $shadow_color;
+        color: $brand_color;
+        margin: 2.5rem 1.5rem 3rem 0;
+        transition: 0.5s ease;
+        box-shadow: $box_shadow;
+        &:hover {
+          background-color: $brand_color;
+          color: $white_color;
+        }
+      }
+    }
+    .cv {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background-color: $brand_color;
+      border-radius: 0.6rem;
+      box-shadow: 0 0.2rem 0.5rem $shadow_color;
+      font-size: 1.2rem;
+      color: $white_color;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      transition: 0.5s ease;
+      border: none;
+      border: 1px solid $brand_color;
+      cursor: pointer;
+      box-shadow: $box_shadow;
+      &:hover {
+        background-color: transparent;
+        color: $brand_color;
+        // transform: scaleX(-180);
+        // transform: rotate3d(1, 1, 1, 45deg);
+        // transform: scaleY(-1px);
+      }
+    }
+  }
+  .homepage_right {
+    @include displayCenter(center, center);
+    .homepage_profile {
+      width: 350px;
+      height: 350px;
+      background-color: $brand_color;
+      border-radius: 50%;
+      @include displayCenter(center, center);
+      box-shadow: 0 8px 8px -4px rgb(74, 177, 200);
+      .homepage_profile_img {
+        width: 280px;
+        height: 280px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .homepage {
+    grid-template-columns: 1fr;
+    top: -80px;
+    padding: 0 4rem;
+
+    .homepage_left {
+      @include displayCenter(center, center);
+      h3 {
+        position: absolute;
+        top: 90px;
+        font-size: 30px;
+      }
+      h1 {
+        font-size: 35px;
+        margin-top: 140px;
+      }
+      .home_content {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+    }
+    .homepage_right {
+      margin-top: 50px;
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+  .homepage {
+    .homepage_left {
+      .home_content {
+        width: 350px;
+      }
+    }
+    .homepage_right {
+      margin-bottom: 100px;
+      @include displayCenter(center, center);
+    }
+  }
+}

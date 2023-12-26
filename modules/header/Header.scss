@@ -1,0 +1,114 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 4rem;
+  z-index: 10;
+  @include displayCenter(center, space-between);
+  background-color: $brand_color;
+  box-shadow: 0 8px 8px -4px lightblue !important;
+  .header_left {
+    @include displayCenter(center, space-between);
+    font-size: 1.5rem;
+    color: $white_color;
+    font-weight: 600;
+    cursor: pointer;
+    .name {
+      &:hover {
+        color: $black_color;
+      }
+    }
+  }
+  .header_right {
+    position: relative;
+    @include displayCenter(center, space-between);
+    .link {
+      position: relative;
+      text-decoration: none;
+      color: $white_color;
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: 20px;
+      cursor: pointer;
+      &:hover {
+        color: $black_color;
+      }
+    }
+    .active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: $white_color;
+      bottom: -6px;
+      cursor: pointer;
+    }
+  }
+  .btn_wrapper {
+    .header_btn {
+      margin-left: 100px;
+      font-size: 1.5rem;
+      color: $white_color;
+      @include displayCenter(center, center);
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .header {
+    width: 100%;
+    padding: 0 1rem;
+
+    // @include displayCenter(flex-start, space-between);
+    .header_right {
+      display: none !important;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .header {
+    .header_right_mobile {
+      width: 300px;
+    }
+  }
+}
+
+.header_right_mobile {
+  position: absolute;
+  background-color: $brand_color !important;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  @include displayCenter(flex-start, flex-start);
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 8px 8px -4px lightblue !important;
+  transition: transform 0.3s ease-in;
+  .link {
+    position: relative;
+    text-decoration: none;
+    color: $white_color;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+  .active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $white_color;
+    bottom: -6px;
+  }
+}
+
+.header_right_mobile.visible {
+  display: visible;
+}

@@ -1,0 +1,72 @@
+.skills {
+  background-color: $black_color;
+  @include displayCenter(center, center);
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 80px;
+  h1 {
+    @include displayCenter(center, center);
+    font-size: 50px;
+    color: $white_color;
+    &:hover {
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5),
+        -4px -4px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    span {
+      color: $brand_color;
+    }
+  }
+  .programming_skills {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 60px;
+  }
+  .programming_skill_content {
+    @include displayCenter(center, center);
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    background-color: $brand_color;
+    color: $black_color;
+    border-radius: 10px;
+    box-shadow: $box_shadow;
+    .skill_icon {
+      width: 50px;
+      height: 50px;
+      background-color: $white_color;
+      border-radius: 50%;
+      @include displayCenter(center, center);
+      box-shadow: 0 8px 8px -4px rgb(16, 19, 20);
+      .icon {
+        font-size: 35px;
+        @include displayCenter(center, center);
+        cursor: pointer;
+      }
+    }
+    .skill_name {
+      font-size: 25px;
+      margin-top: 20px;
+      // text-transform: uppercase;
+      @include displayCenter(center, center);
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .skills {
+    .programming_skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+  .skills {
+    // padding: 4rem;
+    .programming_skills {
+      // padding: 6rem;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+  }
+}
