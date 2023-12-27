@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-import {useWindowSize} from '@/pages/hooks/useWindowSize'
+import {useWindowSize} from '@/hooks/useWindowSize'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import React, {useEffect, useRef, useState} from 'react'

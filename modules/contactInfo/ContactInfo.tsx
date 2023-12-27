@@ -1,4 +1,4 @@
-import useMounted from '@/pages/hooks/useIsMounted'
+import useMounted from '@/hooks/useIsMounted'
 import Link from 'next/link'
 import React, {useRef, useState} from 'react'
 import {
