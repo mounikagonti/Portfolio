@@ -47,6 +47,13 @@
 
 @media screen and (max-width: $md) {
   .projects {
+    h1 {
+      font-size: 45px;
+    }
+  }
+}
+@media screen and (max-width: $md) {
+  .projects {
     .project_container {
       display: grid;
       grid-template-columns: 1fr;
