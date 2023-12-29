@@ -104,11 +104,12 @@
       }
       h1 {
         font-size: 35px;
-        margin-top: 100px;
+        margin-top: 150px;
       }
       .home_content {
         font-size: 18px;
         margin-top: 15px;
+        max-width: 450px;
       }
     }
     .homepage_right {
@@ -122,7 +123,7 @@
 
     .homepage_left {
       .home_content {
-        width: 350px;
+        max-width: 320px;
       }
     }
     .homepage_right {
