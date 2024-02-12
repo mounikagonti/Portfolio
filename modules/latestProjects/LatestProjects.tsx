@@ -4,8 +4,8 @@ import imgOne from '../../public/assets/images/linkedin (2).png'
 import imgTwo from '../../public/assets/images/chatgpt.png'
 import imgThree from '../../public/assets/images/spidynft.png'
 import imgFour from '../../public/assets/images/tesla.png'
-import imgFive from '../../public/assets/images/landingpage.png'
-import imgSix from '../../public/assets/images/dashboard.png'
+import imgFive from '../../public/assets/images/frontendquizapp.png'
+import imgSix from '../../public/assets/images/mobilepresentaion.png'
 
 const LatestProjects = ({id}: any) => {
   return (
@@ -53,7 +53,7 @@ const LatestProjects = ({id}: any) => {
         </div>
         <div className='project_box'>
           <a
-            href='https://wedding-landding-page-with-nextjs-react-js.vercel.app/'
+            href='https://frontend-quiz-app-six.vercel.app/'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -62,7 +62,7 @@ const LatestProjects = ({id}: any) => {
         </div>
         <div className='project_box'>
           <a
-            href='https://nft-dashboard-with-wallet-connect.vercel.app/'
+            href='https://mobile-app-presentation-jjiw.vercel.app/'
             target='_blank'
             rel='noopener noreferrer'
           >
