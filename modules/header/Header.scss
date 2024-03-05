@@ -7,8 +7,14 @@
   padding: 0 4rem;
   z-index: 10;
   @include displayCenter(center, space-between);
-  background-color: $brand_color;
-  box-shadow: 0 8px 8px -4px lightblue !important;
+  // background-color: $brand_color;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(9, 9, 121, 1) 35%,
+  //   rgba(0, 212, 255, 1) 100%
+  // );
+  // box-shadow: 0 8px 8px -4px lightblue !important;
   .header_left {
     @include displayCenter(center, space-between);
     font-size: 1.5rem;

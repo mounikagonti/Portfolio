@@ -5,7 +5,11 @@
     padding-top: 100px;
     @include displayCenter(center, center);
     font-size: 50px;
-    color: $white_color;
+    // color: $white_color;
+    background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
+      #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     &:hover {
       text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5),
         -4px -4px 8px rgba(255, 255, 255, 0.8);
@@ -25,9 +29,7 @@
       position: relative;
       display: flex;
       border-radius: 1rem;
-      border: 2px solid $brand_color;
-      //   padding: 1rem;
-      //   width: 300px;
+      border: 2px solid #064aa4;
       height: 300px;
       object-fit: contain;
       box-shadow: $box_shadow;

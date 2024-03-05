@@ -103,46 +103,48 @@ const Header = () => {
   })
 
   return (
-    <div className='header_container'>
-      <div className='header'>
-        <div className='header_left'>
-          <div className='name'>Mounika Gonti</div>
-        </div>
-        <nav
-          ref={sidebarRef}
-          className={
-            isMobileDevice && menu
-              ? 'header_right_mobile visible'
-              : 'header_right'
-          }
-        >
-          {menuItems.map((item) => (
-            <p
-              key={item.id}
-              className={item.isActive ? 'link active' : 'link'}
-              onClick={() =>
-                handleNavigation(item?.id, item?.title?.toLowerCase())
-              }
-            >
-              {item.title}
-            </p>
-          ))}
-        </nav>
-        {isMobileDevice && (
-          <div className='btn_wrapper'>
-            {!menu ? (
-              <div onClick={handleOnMenuClick} className='header_btn'>
-                <IoMdMenu />
-              </div>
-            ) : (
-              <div onClick={handleOnMenuClick} className='header_btn'>
-                <IoMdClose />
-              </div>
-            )}
+    <header className='header_container'>
+      <div className='container'>
+        <div className='header'>
+          <div className='header_left'>
+            <div className='name'>Mounika Gonti</div>
           </div>
-        )}
+          <nav
+            ref={sidebarRef}
+            className={
+              isMobileDevice && menu
+                ? 'header_right_mobile visible'
+                : 'header_right'
+            }
+          >
+            {menuItems.map((item) => (
+              <p
+                key={item.id}
+                className={item.isActive ? 'link active' : 'link'}
+                onClick={() =>
+                  handleNavigation(item?.id, item?.title?.toLowerCase())
+                }
+              >
+                {item.title}
+              </p>
+            ))}
+          </nav>
+          {isMobileDevice && (
+            <div className='btn_wrapper'>
+              {!menu ? (
+                <div onClick={handleOnMenuClick} className='header_btn'>
+                  <IoMdMenu />
+                </div>
+              ) : (
+                <div onClick={handleOnMenuClick} className='header_btn'>
+                  <IoMdClose />
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </header>
   )
 }
 
