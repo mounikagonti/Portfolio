@@ -15,6 +15,43 @@ import {BiLogoVisualStudio} from 'react-icons/bi'
 const Skills = ({id}: any) => {
   const skillsArray = [
     {
+      id: 6,
+      icon: <TbBrandNextjs />,
+      name: 'Next js',
+      // description:
+      //   'Next.js is a React framework that gives you building blocks to create web applications.',
+    },
+    {
+      id: 5,
+      icon: <GrReactjs />,
+      name: 'React js',
+      // description:
+      //   'React is a free and open-source front-end JavaScript library for building user interfaces based on components.',
+    },
+    {
+      id: 4,
+      icon: <IoLogoJavascript />,
+      name: 'JS',
+      // description:
+      //   'JavaScript,is a programming language that is one of the core technologies of the World Wide Web.',
+    },
+    {
+      id: 9,
+      icon: <TbBrandTypescript />,
+      name: 'TS',
+      // description:
+      //   'TypeScript is a open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.',
+    },
+
+    {
+      id: 7,
+      icon: <SiRedux />,
+      name: 'RTK',
+      // description:
+      //   'Redux is an open-source JavaScript library for managing and centralizing application state.',
+    },
+
+    {
       id: 1,
       icon: <ImHtmlFive2 />,
       name: 'HTML',
@@ -35,34 +72,7 @@ const Skills = ({id}: any) => {
       // description:
       //   'Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.',
     },
-    {
-      id: 4,
-      icon: <IoLogoJavascript />,
-      name: 'JS',
-      // description:
-      //   'JavaScript,is a programming language that is one of the core technologies of the World Wide Web.',
-    },
-    {
-      id: 5,
-      icon: <GrReactjs />,
-      name: 'React js',
-      // description:
-      //   'React is a free and open-source front-end JavaScript library for building user interfaces based on components.',
-    },
-    {
-      id: 6,
-      icon: <TbBrandNextjs />,
-      name: 'Next js',
-      // description:
-      //   'Next.js is a React framework that gives you building blocks to create web applications.',
-    },
-    {
-      id: 7,
-      icon: <SiRedux />,
-      name: 'RTK',
-      // description:
-      //   'Redux is an open-source JavaScript library for managing and centralizing application state.',
-    },
+
     {
       id: 8,
       icon: <SiTailwindcss />,
@@ -70,13 +80,7 @@ const Skills = ({id}: any) => {
       // description:
       //   'Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces.',
     },
-    {
-      id: 9,
-      icon: <TbBrandTypescript />,
-      name: 'TS',
-      // description:
-      //   'TypeScript is a open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.',
-    },
+
     {
       id: 10,
       icon: <TbBrandBootstrap />,
@@ -102,16 +106,13 @@ const Skills = ({id}: any) => {
 
   return (
     <div className='skills' id={id}>
-      <h1>
-        Skill <span>-Set</span>
-      </h1>
+      <h1 className='section_title'>Things I code with</h1>
       <div className='programming_skills'>
         {skillsArray.map((item: any) => (
           <div className='programming_skill_content' key={item.id}>
             <div className='skill_icon'>
               <div className='icon'>{item.icon}</div>
             </div>
-            <div className='skill_name'>{item.name}</div>
           </div>
         ))}
       </div>

@@ -28,10 +28,10 @@ const About = ({id}: any) => {
           </div>
         </div> */}
         <div className='about_right'>
-          <h1>
+          <h1 className='anta-regular'>
             About <span>Me</span>
           </h1>
-          <h3>Hello, I&apos;m Mounika Gonti</h3>
+          <h3>H!, I&apos;m  <span className='anta-regular'>Mounika Gonti</span></h3>
           <h4>Frontend Developer</h4>
           <p>
             I am a passionate frontend developer dedicated to crafting seamless

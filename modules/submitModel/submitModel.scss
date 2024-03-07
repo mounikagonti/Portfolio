@@ -44,7 +44,7 @@
 // }
 
 .model_mask {
-  background-color: rgba(102, 51, 153, 0.781);
+  background-color: rgba(9, 2, 16, 0.709);
   width: 100%;
   position: fixed;
   top: 0;
@@ -83,6 +83,7 @@
     border-radius: 2px;
     margin-top: 50px;
     padding: 5px 10px;
+    cursor: pointer;
     &:focus {
       outline: none;
     }

@@ -4,15 +4,31 @@
   height: 100vh;
   width: 100%;
   padding: 0 8rem;
+  background-image: url('../../public/assets/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   @include displayCenter(center, center);
   background-color: $black_color;
   display: flex;
-  top: -80px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.605);
+    z-index: 1;
+  }
   .homepage_left {
+    position: relative;
+    z-index: 2;
     @include displayCenter(center, center);
     flex-direction: column;
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       animation-name: hello;
       animation-duration: 1s;
       background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
@@ -22,7 +38,7 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       animation: name 1.5s ease-in;
       color: $white_color;
       // margin-top: 10px;
@@ -32,116 +48,13 @@
       background-clip: text;
     }
     .home_content {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: $white_color;
       max-width: 800px;
       margin-top: 30px;
-    }
-    // .social_media {
-    //   .social_media_icon {
-    //     display: inline-flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     width: 3rem;
-    //     height: 3rem;
-    //     // background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
-    //     background-image: linear-gradient(
-    //       -225deg,
-    //       #231557 0%,
-    //       #44107a 29%,
-    //       #ff1361 67%,
-    //       #fff800 100%
-    //     );
-    //     border-radius: 50%;
-    //     font-size: 1.5rem;
-    //     box-shadow: 0 0.2rem 0.5rem $shadow_color;
-    //     color: $white_color;
-    //     margin: 2.5rem 1.5rem 3rem 0;
-    //     transition: 0.5s ease;
-    //     box-shadow: $box_shadow;
-    //     &:hover {
-    //       background-color: $brand_color;
-    //       color: $white_color;
-    //     }
-    //   }
-    // }
-    .glow-on-hover {
-      width: 220px;
-      height: 50px;
-      margin-top: 80px;
-      border: 2px solid #064aa4;
-      outline: none;
-      color: #fff;
-      background: #111;
-      cursor: pointer;
-      position: relative;
-      z-index: 0;
-      border-radius: 10px;
-      &:before {
-        content: '';
-        background: linear-gradient(
-          45deg,
-          #ff0000,
-          #ff7300,
-          #fffb00,
-          #48ff00,
-          #00ffd5,
-          #002bff,
-          #7a00ff,
-          #ff00c8,
-          #ff0000
-        );
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing 20s linear infinite;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        border-radius: 10px;
-      }
-
-      &:active {
-        color: #000;
-      }
-      &:active:after {
-        background: transparent;
-      }
-      &:hover:before {
-        opacity: 1;
-      }
-      &:after {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #111;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-      }
+      text-align: justify;
     }
   }
-  // .homepage_right {
-  //   @include displayCenter(center, center);
-  //   .homepage_profile {
-  //     width: 350px;
-  //     height: 350px;
-  //     background-color: $brand_color;
-  //     border-radius: 50%;
-  //     @include displayCenter(center, center);
-  //     box-shadow: 0 8px 8px -4px rgb(74, 177, 200);
-  //     .homepage_profile_img {
-  //       width: 280px;
-  //       height: 280px;
-  //     }
-  //   }
-  // }
 }
 
 @keyframes typing {

@@ -1,26 +1,11 @@
 .skills {
+  padding: 5rem 0;
   background-color: $black_color;
-  // background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   @include displayCenter(center, center);
   flex-direction: column;
   gap: 60px;
-  padding-top: 80px;
-  h1 {
-    @include displayCenter(center, center);
-    font-size: 50px;
-    // color: $white_color;
-    background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
-      #fff;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    &:hover {
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5),
-        -4px -4px 8px rgba(255, 255, 255, 0.8);
-    }
-
-    span {
-      color: $brand_color;
-    }
+  .section_title {
+    margin: 0 0 4rem 0 !important;
   }
   .programming_skills {
     display: grid;
@@ -30,38 +15,13 @@
   .programming_skill_content {
     @include displayCenter(center, center);
     flex-direction: column;
-    width: 150px;
-    height: 150px;
-    // background-color: $brand_color;
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    width: 100px;
+    height: 100px;
     color: $white_color;
     border-radius: 10px;
-    box-shadow: $box_shadow;
-    .skill_icon {
-      width: 50px;
-      height: 50px;
-      // background-color: $white_color;
-      // background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
-      background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
-      );
-      border-radius: 50%;
-      @include displayCenter(center, center);
-      box-shadow: 0 8px 8px -4px rgb(16, 19, 20);
-      .icon {
-        font-size: 35px;
-        @include displayCenter(center, center);
-        cursor: pointer;
-      }
-    }
-    .skill_name {
-      font-size: 25px;
-      margin-top: 20px;
-      // text-transform: uppercase;
+    box-shadow: $box_shadow_brand;
+    .icon {
+      font-size: 35px;
       @include displayCenter(center, center);
     }
   }
@@ -70,16 +30,17 @@
 @media screen and (max-width: $md) {
   .skills {
     .programming_skills {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 @media screen and (max-width: $sm) {
   .skills {
-    // padding: 4rem;
+    .section_title {
+      font-size: 35px;
+    }
     .programming_skills {
-      // padding: 6rem;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
   }

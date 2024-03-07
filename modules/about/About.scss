@@ -1,20 +1,25 @@
 .about {
-  padding: 8rem;
+  padding: 5rem 0;
   @include displayCenter(center, center);
   background-color: $black_color;
-  // .about_left {
-  //   @include displayCenter(center, center);
-  //   .about_profile {
-  //     background-color: $brand_color;
-  //     height: 400px;
-  //     width: 500px;
-  //     clip-path: polygon(0 0, 51% 100%, 100% 0);
-  //   }
-  // }
+  background-image: url('../../public/assets/aboutBg.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.605);
+    z-index: 1;
+  }
   .about_right {
     @include displayCenter(center, center);
     flex-direction: column;
-    margin-top: -60px;
+    z-index: 2;
     h1 {
       font-size: 50px;
       background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
@@ -30,27 +35,26 @@
       }
     }
     h3 {
-      font-size: 25px;
+      font-size: 2.5rem;
       margin-top: 30px;
       background: linear-gradient(90deg, #0ef, #ff00ea, #fffb00);
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      margin-top: 5rem;
     }
     h4 {
-      font-size: 20px;
+      font-size: 1.5rem;
       margin-top: 5px;
       background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     p {
-      font-size: 20px;
-      background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),
-        #fff;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-top: 40px;
+      font-size: 18px;
+      margin-top: 20px;
+      color: white;
       max-width: 800px;
+      text-align: justify;
       span {
         span {
           .about_text_heading {
@@ -98,7 +102,7 @@
     // }
     .glow-on-hover {
       width: 220px;
-      height: 50px;
+      // height: 50px;
       margin-top: 60px;
       border: 2px solid #064aa4;
       outline: none;
@@ -216,29 +220,33 @@
 @media screen and (max-width: $md) {
   .about {
     @include displayCenter(center, center);
-    padding: 2rem;
-    .about_left {
-      display: none;
-    }
+    padding: 2rem 10px;
     .about_right {
-      margin-top: 250px;
       @include displayCenter(center, center);
       padding-bottom: 5rem;
+      h3 {
+        font-size: 30px;
+      }
       p {
         max-width: 500px;
-        height: 220px;
       }
+     
     }
   }
 }
 @media screen and (max-width: $sm) {
   .about {
     .about_right {
-      margin-top: 300px;
+      h3 {
+        font-size: 25px;
+      }
+      h4 {
+        font-size: 1.2rem;
+      }
       p {
         max-width: 350px;
-        height: 300px;
       }
+      
     }
   }
 }

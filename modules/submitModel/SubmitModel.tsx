@@ -16,7 +16,7 @@ const SubmitModel = ({isModalOpen, setIsModalOpen}: any) => {
           Form successfully submitted Thankyou!
         </div>
         <button onClick={handleOnOkClick} className='ok_btn'>
-          Ok
+          Close
         </button>
       </div>
     </div>

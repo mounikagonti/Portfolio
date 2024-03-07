@@ -8,6 +8,8 @@ import {
   AiOutlineMail,
 } from 'react-icons/ai'
 import {BsTelephone} from 'react-icons/bs'
+import {FcHome, FcPhoneAndroid} from 'react-icons/fc'
+import {SiGmail} from 'react-icons/si'
 import {SlLocationPin} from 'react-icons/sl'
 import emailjs from '@emailjs/browser'
 import {useForm} from 'react-hook-form'
@@ -16,22 +18,22 @@ import SubmitModel from '../submitModel/SubmitModel'
 
 const contactInfoIcons = [
   {
-    id: 1,
-    icon: <AiOutlineMail />,
-    boldText: 'Chart to me',
-    smallText: 'hmounika1997@gmail.com',
-  },
-  {
     id: 2,
     icon: <SlLocationPin />,
     boldText: 'Location',
-    smallText: 'Nizamabad, kotagiri',
+    smallText: 'Hyderabad, India',
   },
   {
     id: 3,
     icon: <BsTelephone />,
     boldText: 'Phone Number',
     smallText: '9701866010',
+  },
+  {
+    id: 1,
+    icon: <AiOutlineMail />,
+    boldText: 'Chart to me',
+    smallText: 'hmounika1997@gmail.com',
   },
 ]
 const socialLinkIcons = [
@@ -67,7 +69,7 @@ const ContactInfo = ({id}: any) => {
 
   const from = useForm<FormValues>()
   const {register, handleSubmit, formState} = from
-  const {errors} = formState
+  const {errors, isSubmitting} = formState
 
   // const sendEmail = (e: React.FormEvent<HTMLFormElement>, data: FormValues) => {
   //   e.preventDefault()
@@ -122,33 +124,46 @@ const ContactInfo = ({id}: any) => {
     isMounted && (
       <>
         <div className='contactInfo' id={id}>
-          <h1>
-            Contact<span> Info </span>
-          </h1>
-          <div className='contactInfo_top'>
-            {contactInfoIcons.map((item: any) => (
-              <div className='card_one' key={item.id}>
-                <div className='card_icon'>
-                  <div className='icon'>{item.icon}</div>
-                </div>
-                <div className='card_text'>
-                  <div className='bold_Text'>{item.boldText}</div>
-                  <div className='small_Text'>{item.smallText}</div>
+          <h1 className='section_title'>Contact</h1>
+          <p className='get_in_text'>
+            I am thrilled that you are interested in getting in touch. Whether
+            you have a project in mind, a question to ask, or simply want to say
+            hello, I would love to hear from you. Feel free to reach out through
+            any of the following methods.
+          </p>
+          <div className='contactInfo_bottom'>
+            <div className='contact_left_wrapper'>
+              <div className='contact_left'>
+                <div className='contact_left_inner'>
+                  <div className='contact_social_links'>
+                    <h2>I&apos;M ALSO ON SOCIAL NETWORKS</h2>
+                  </div>
+                  <div className='home'>
+                    <FcHome className='icon' />
+                    <div>
+                      <h4>Address</h4>
+                      <p>Hyderabad, India</p>
+                    </div>
+                  </div>
+                  <div className='phone'>
+                    <FcPhoneAndroid className='icon' />
+                    <div>
+                      <h4>Let&apos;s Talk</h4>
+                      <a href='tel:9701866010'>+91 9701866010</a>
+                    </div>
+                  </div>
+                  <div className='mail'>
+                    <SiGmail className='icon' />
+                    <div>
+                      <h4>E-Mail</h4>
+                      <a href='mailto:gontimounika1998@gmail.com'>
+                        gontimounika1998@gmail.com
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className='contactInfo_bottom'>
-            <div className='contactInfo_bottom_left'>
-              <h2>Get In Touch</h2>
-              <h4>Hi, i am Mounika Gonti</h4>
-              <p className='get_in_text'>
-                I am thrilled that you are interested in getting in touch.
-                Whether you have a project in mind, a question to ask, or simply
-                want to say hello, I would love to hear from you. Feel free to
-                reach out through any of the following methods.
-              </p>
-              <div className='social_links'>
+              <div className='footer_top'>
                 {socialLinkIcons.map((item: any) => (
                   <Link
                     key={item.id}
@@ -171,7 +186,7 @@ const ContactInfo = ({id}: any) => {
                     {...register('username', {
                       required: {
                         value: true,
-                        message: 'full name is required',
+                        message: 'Full name is required',
                       },
                     })}
                   />
@@ -203,6 +218,10 @@ const ContactInfo = ({id}: any) => {
                           )
                         },
                       },
+                      required: {
+                        value: true,
+                        message: 'Email is required',
+                      },
                     })}
                   />
                   <p className='error'>{errors.email?.message}</p>
@@ -215,14 +234,14 @@ const ContactInfo = ({id}: any) => {
                     {...register('message', {
                       required: {
                         value: true,
-                        message: 'message is required',
+                        message: 'Message is required',
                       },
                     })}
                   />
                   <p className='error'>{errors.message?.message}</p>
                 </div>
-                <button type='submit' className='btn' value='Send'>
-                  {isLoading ? 'Loading...' : 'Submit'}
+                <button type='submit' className='glow-on-hover' value='Send'>
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
               </form>
             </div>

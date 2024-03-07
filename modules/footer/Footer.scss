@@ -1,39 +1,14 @@
 .footer {
-  // background-color: $brand_color;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  .footer_top {
-    @include displayCenter(center, center);
-    gap: 30px;
-    padding: 0.5rem;
-    .social_link_icon {
-      background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
-      );
-      @include displayCenter(center, flex-start);
-      font-size: 25px;
-      color: $white_color;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 50%;
-      box-shadow: $box_shadow;
-    }
-  }
-  hr {
-    color: $white_color;
-  }
+  width: 100%;
+  height: 120px;
+  box-shadow: $box_shadow_brand;
+  @include displayCenter(center, center);
   .footer_bottom {
-    padding: 0.5rem;
-    @include displayCenter(center, center);
     font-size: 16px;
     color: $white_color;
+    width: 100%;
+    width: max-content;
+    margin: auto;
+    text-align: center;
   }
 }

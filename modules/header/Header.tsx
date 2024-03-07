@@ -107,7 +107,7 @@ const Header = () => {
       <div className='container'>
         <div className='header'>
           <div className='header_left'>
-            <div className='name'>Mounika Gonti</div>
+            <div className='anta-regular'>Mounika Gonti</div>
           </div>
           <nav
             ref={sidebarRef}

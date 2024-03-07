@@ -22,19 +22,14 @@ const Footer = () => {
     },
   ]
   return (
-    <div className='footer'>
-      <div className='footer_top'>
-        {socialLinks.map((item: any) => (
-          <Link key={item.id} href={item.link} className='social_link_icon'>
-            {item.icon}
-          </Link>
-        ))}
-      </div>
-      <hr />
+    <footer className='footer'>
       <div className='footer_bottom'>
-        &copy; Copyright 2023 Mounika Gonti - All Rights Received
+        <p>
+          &copy; Copyright {new Date().getFullYear()} Mounika Gonti - All Rights
+          Received
+        </p>
       </div>
-    </div>
+    </footer>
   )
 }
 
