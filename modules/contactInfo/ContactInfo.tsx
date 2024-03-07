@@ -178,7 +178,7 @@ const ContactInfo = ({id}: any) => {
             <div className='contactInfo_bottom_right'>
               <form ref={formRef} onSubmit={handleSubmit(sendEmail)}>
                 <div className='input_wrapper'>
-                  <label htmlFor='name'>Name:</label>
+                  <label htmlFor='name'>Name</label>
                   <input
                     type='text'
                     placeholder='Enter your full name'
@@ -193,7 +193,7 @@ const ContactInfo = ({id}: any) => {
                   <p className='error'>{errors.username?.message}</p>
                 </div>
                 <div className='input_wrapper'>
-                  <label htmlFor='email'>Email:</label>
+                  <label htmlFor='email'>Email</label>
                   <input
                     type='email'
                     placeholder='Enter a valid email address'
@@ -227,7 +227,7 @@ const ContactInfo = ({id}: any) => {
                   <p className='error'>{errors.email?.message}</p>
                 </div>
                 <div className='input_wrapper'>
-                  <label htmlFor='message'>Message:</label>
+                  <label htmlFor='message'>Message</label>
                   <textarea
                     placeholder='Enter your message'
                     id='message'
