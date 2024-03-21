@@ -19,11 +19,19 @@
     color: $white_color;
     font-weight: 600;
     cursor: pointer;
-    .name {
-      &:hover {
-        color: $black_color;
-      }
+    &:hover {
+      background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
+    // .name {
+    //   &:hover {
+    //     // color: $black_color;
+    //     background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
+    //     -webkit-text-fill-color: transparent;
+    //     background-clip: text;
+    //   }
+    // }
   }
   .header_right {
     position: relative;
@@ -37,7 +45,9 @@
       margin-right: 20px;
       cursor: pointer;
       &:hover {
-        color: $black_color;
+        background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
     .active::before {
