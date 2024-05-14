@@ -6,6 +6,7 @@ import imgThree from '../../public/assets/images/spidynft.png'
 import imgFour from '../../public/assets/images/tesla.png'
 import imgFive from '../../public/assets/images/frontendquizapp.png'
 import imgSix from '../../public/assets/images/mobilepresentaion.png'
+import imgSeven from '../../public/GXBER (2).png'
 
 const LatestProjects = ({id}: any) => {
   return (
@@ -16,6 +17,15 @@ const LatestProjects = ({id}: any) => {
           <span> Projects</span>
         </h1>
         <div className='project_container'>
+          <div className='project_box'>
+            <a
+              href='https://gxber-c.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='projectImg' src={imgSeven} alt='projectOne' />
+            </a>
+          </div>
           <div className='project_box'>
             <a
               href='https://linked-in-clone-one-im7i.vercel.app'
