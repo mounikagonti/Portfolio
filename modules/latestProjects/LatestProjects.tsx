@@ -7,6 +7,7 @@ import imgFour from '../../public/assets/images/tesla.png'
 import imgFive from '../../public/assets/images/frontendquizapp.png'
 import imgSix from '../../public/assets/images/mobilepresentaion.png'
 import imgSeven from '../../public/GXBER (2).png'
+import imgEight from '../../public/assets/images/walmartClone.png'
 
 const LatestProjects = ({id}: any) => {
   return (
@@ -17,6 +18,15 @@ const LatestProjects = ({id}: any) => {
           <span> Projects</span>
         </h1>
         <div className='project_container'>
+          <div className='project_box'>
+            <a
+              href='https://walmart-clone-seven.vercel.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='projectImg' src={imgEight} alt='projectOne' />
+            </a>
+          </div>
           <div className='project_box'>
             <a
               href='https://gxber-c.netlify.app/'
