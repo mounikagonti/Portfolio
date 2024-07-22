@@ -8,6 +8,7 @@ import imgFive from '../../public/assets/images/frontendquizapp.png'
 import imgSix from '../../public/assets/images/mobilepresentaion.png'
 import imgSeven from '../../public/GXBER (2).png'
 import imgEight from '../../public/assets/images/walmartClone.png'
+import imgNine from '../../public/assets/images/pexels.png'
 
 const LatestProjects = ({id}: any) => {
   return (
@@ -18,6 +19,15 @@ const LatestProjects = ({id}: any) => {
           <span> Projects</span>
         </h1>
         <div className='project_container'>
+          <div className='project_box'>
+            <a
+              href='https://pexels-clone-rouge.vercel.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='projectImg' src={imgNine} alt='projectOne' />
+            </a>
+          </div>
           <div className='project_box'>
             <a
               href='https://walmart-clone-seven.vercel.app/'
@@ -33,7 +43,7 @@ const LatestProjects = ({id}: any) => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Image className='projectImg' src={imgSeven} alt='projectOne' />
+              <Image className='projectImg' src={imgNine} alt='projectOne' />
             </a>
           </div>
           <div className='project_box'>
