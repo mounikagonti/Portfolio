@@ -43,7 +43,7 @@ const LatestProjects = ({id}: any) => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Image className='projectImg' src={imgNine} alt='projectOne' />
+              <Image className='projectImg' src={imgSeven} alt='projectOne' />
             </a>
           </div>
           <div className='project_box'>
