@@ -9,6 +9,8 @@ import imgSix from '../../public/assets/images/mobilepresentaion.png'
 import imgSeven from '../../public/GXBER (2).png'
 import imgEight from '../../public/assets/images/walmartClone.png'
 import imgNine from '../../public/assets/images/pexels.png'
+import imgTen from '../../public/assets/images/wellness-retreat.png'
+import imgEleven from '../../public/assets/images/reddit-reactjs.png'
 
 const LatestProjects = ({id}: any) => {
   return (
@@ -19,6 +21,24 @@ const LatestProjects = ({id}: any) => {
           <span> Projects</span>
         </h1>
         <div className='project_container'>
+          <div className='project_box'>
+            <a
+              href='https://reddit-reactjs.vercel.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='projectImg' src={imgEleven} alt='projectOne' />
+            </a>
+          </div>
+          <div className='project_box'>
+            <a
+              href='https://retreats-info.netlify.app/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='projectImg' src={imgTen} alt='projectOne' />
+            </a>
+          </div>
           <div className='project_box'>
             <a
               href='https://pexels-clone-rouge.vercel.app/'
