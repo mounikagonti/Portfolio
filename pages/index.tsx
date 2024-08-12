@@ -16,8 +16,8 @@ export default function Home() {
         <meta name='robots' content='index,follow' />
         <meta name='googlebot' content='index,follow' />
         <meta charSet='UTF-8' />
-        <meta http-equiv='content-language' content='en' />
-        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <meta http-Equiv='content-language' content='en' />
+        <meta http-Equiv='content-type' content='text/html; charset=utf-8' />
         <link rel='canonical' href='https://www.mounikagonti.dev/' />
         <meta name='author' content='Mounika Gonti' />
         <link rel='icon' href='/public/favicon.ico' />

@@ -11,6 +11,9 @@ import {
 import {VscVscode} from 'react-icons/vsc'
 import {SiRedux, SiTailwindcss} from 'react-icons/si'
 import {BsGithub} from 'react-icons/bs'
+import {SiReactquery} from 'react-icons/si'
+import {SiMui} from 'react-icons/si'
+import {SiFirebase} from 'react-icons/si'
 
 const Skills = ({id}: any) => {
   const skillsArray = [
@@ -32,7 +35,7 @@ const Skills = ({id}: any) => {
     {
       id: 4,
       icon: <IoLogoJavascript />,
-      name: 'JS',
+      name: 'JavaScript',
     },
     {
       id: 5,
@@ -47,19 +50,17 @@ const Skills = ({id}: any) => {
     {
       id: 7,
       icon: <SiRedux />,
-      name: 'RTK',
+      name: 'Redux Toolkit',
     },
-
     {
       id: 8,
       icon: <SiTailwindcss />,
       name: 'TailwindCSS',
     },
-
     {
       id: 9,
       icon: <TbBrandTypescript />,
-      name: 'TS',
+      name: 'Typescript',
     },
 
     {
@@ -77,6 +78,21 @@ const Skills = ({id}: any) => {
       icon: <VscVscode />,
       name: 'vs code',
     },
+    {
+      id: 13,
+      icon: <SiReactquery />,
+      name: 'React query',
+    },
+    {
+      id: 14,
+      icon: <SiMui />,
+      name: 'Material UI',
+    },
+    {
+      id: 15,
+      icon: <SiFirebase />,
+      name: 'Firebase',
+    },
   ]
 
   return (
@@ -87,6 +103,7 @@ const Skills = ({id}: any) => {
           <div className='programming_skill_content' key={item.id}>
             <div className='skill_icon'>
               <div className='icon'>{item.icon}</div>
+              <span className='tooltip'>{item.name}</span>
             </div>
           </div>
         ))}

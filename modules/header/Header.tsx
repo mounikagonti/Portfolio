@@ -2,6 +2,7 @@ import {useWindowSize} from '@/hooks/useWindowSize'
 import React, {useEffect, useRef, useState} from 'react'
 import {IoCloseSharp} from 'react-icons/io5'
 import {IoMdMenu} from 'react-icons/io'
+import {useRouter} from 'next/navigation'
 
 type navItem = {
   id: number
@@ -42,6 +43,12 @@ const Header = () => {
   const [menuItems, setMenuItems] = useState<navItem[]>(headerRight)
   const {windowSize} = useWindowSize()
   const sidebarRef = useRef<any>(null)
+
+  const router = useRouter()
+
+  const handleOnHomeClick = () => {
+    router.push('/')
+  }
 
   const isMobileDevice = windowSize?.width < 768
 
@@ -93,7 +100,9 @@ const Header = () => {
       <div className='container'>
         <div className='header'>
           <div className='header_left'>
-            <div className='anta-regular'>Mounika Gonti</div>
+            <div onClick={handleOnHomeClick} className='anta-regular'>
+              Mounika Gonti
+            </div>
           </div>
           <nav
             ref={sidebarRef}
