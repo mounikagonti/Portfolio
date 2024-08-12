@@ -1,12 +1,10 @@
 import useMounted from '@/hooks/useIsMounted'
 import Link from 'next/link'
 import React, {useRef, useState} from 'react'
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiOutlineMail,
-} from 'react-icons/ai'
+import {FaGithub} from 'react-icons/fa6'
+import {FaInstagram} from 'react-icons/fa'
+import {FaLinkedin} from 'react-icons/fa6'
+import {AiOutlineMail} from 'react-icons/ai'
 import {BsTelephone} from 'react-icons/bs'
 import {FcHome, FcPhoneAndroid} from 'react-icons/fc'
 import {SiGmail} from 'react-icons/si'
@@ -39,17 +37,17 @@ const contactInfoIcons = [
 const socialLinkIcons = [
   {
     id: 1,
-    icon: <AiFillGithub />,
+    icon: <FaGithub />,
     link: 'https://github.com/mounikagonti',
   },
   {
     id: 2,
-    icon: <AiFillLinkedin />,
+    icon: <FaLinkedin />,
     link: 'https://www.linkedin.com/in/mounika-gonti-318074183/',
   },
   {
     id: 3,
-    icon: <AiFillInstagram />,
+    icon: <FaInstagram />,
     link: 'https://www.instagram.com/mounika_halde/',
   },
 ]
@@ -71,29 +69,6 @@ const ContactInfo = ({id}: any) => {
   const {register, handleSubmit, formState} = from
   const {errors, isSubmitting} = formState
 
-  // const sendEmail = (e: React.FormEvent<HTMLFormElement>, data: FormValues) => {
-  //   e.preventDefault()
-  //   console.log('form submit', data)
-
-  //   emailjs
-  //     .sendForm(
-  //       'service_1vlz21a',
-  //       'template_yqkka0e',
-  //       e.currentTarget,
-  //       'b_L9K2HYFXW9azKai'
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text)
-  //         setNameValue('')
-  //         setEmail('')
-  //         setMessage('')
-  //       },
-  //       (error) => {
-  //         console.log(error.text)
-  //       }
-  //     )
-  // }
 
   const sendEmail: SubmitHandler<FormValues> = async (data: FormValues) => {
     console.log('form submit', data)

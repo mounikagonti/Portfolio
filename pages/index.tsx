@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Header from '@/modules/header/Header'
 import HomePage from '@/modules/homePage/HomePage'
 import About from '@/modules/about/About'
-import LatestProjects from '@/modules/latestProjects/LatestProjects'
 import Skills from '@/modules/skills/Skills'
 import Footer from '@/modules/footer/Footer'
 import ContactInfo from '@/modules/contactInfo/ContactInfo'
+import ProjectCard from '@/modules/projectCard/ProjectCard'
 
 export default function Home() {
   return (
@@ -83,7 +83,7 @@ export default function Home() {
       <Header />
       <HomePage id='home' />
       <About id='about' />
-      <LatestProjects id='projects' />
+      <ProjectCard id='projects' />
       <Skills id='skills' />
       <ContactInfo id='contact' />
       <Footer />

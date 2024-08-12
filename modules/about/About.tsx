@@ -1,37 +1,16 @@
-import Image from 'next/image'
-import React, {useState} from 'react'
-import profilePic from '../../public/assets/images/mounikagonti.png'
+import React from 'react'
 
 const About = ({id}: any) => {
-  const [readMoreModel, setReadMoreModel] = useState<boolean>(false)
-
-  const handleOnReadMoreClick = () => {
-    setReadMoreModel((prev) => !prev)
-  }
-
   return (
     <>
       <div className='about' id={id}>
-        {/* <div className='about_left'>
-          <div className='about_profile'>
-            <Image
-              alt='Profile'
-              width={300}
-              height={450}
-              src={profilePic}
-              style={{
-                borderRadius: '50%',
-                marginLeft: '100px',
-                marginBottom: '200px',
-              }}
-            />
-          </div>
-        </div> */}
         <div className='about_right'>
           <h1 className='anta-regular'>
             About <span>Me</span>
           </h1>
-          <h3>H!, I&apos;m  <span className='anta-regular'>Mounika Gonti</span></h3>
+          <h3>
+            H!, I&apos;m <span className='anta-regular'>Mounika Gonti</span>
+          </h3>
           <h4>Frontend Developer</h4>
           <p>
             I am a passionate frontend developer dedicated to crafting seamless

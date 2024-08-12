@@ -24,14 +24,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    // .name {
-    //   &:hover {
-    //     // color: $black_color;
-    //     background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
-    //     -webkit-text-fill-color: transparent;
-    //     background-clip: text;
-    //   }
-    // }
+
   }
   .header_right {
     position: relative;
@@ -75,8 +68,6 @@
   .header {
     width: 100%;
     padding: 0 1rem;
-
-    // @include displayCenter(flex-start, space-between);
     .header_right {
       display: none !important;
       flex-direction: column;

@@ -1,9 +1,6 @@
-// import Image from 'next/image'
 import {useWindowSize} from '@/hooks/useWindowSize'
-import Link from 'next/link'
-import {useRouter} from 'next/router'
 import React, {useEffect, useRef, useState} from 'react'
-import {IoMdClose} from 'react-icons/io'
+import {IoCloseSharp} from 'react-icons/io5'
 import {IoMdMenu} from 'react-icons/io'
 
 type navItem = {
@@ -44,7 +41,6 @@ const Header = () => {
   const [menu, setMenu] = useState(false)
   const [menuItems, setMenuItems] = useState<navItem[]>(headerRight)
   const {windowSize} = useWindowSize()
-  // const router = useRouter()
   const sidebarRef = useRef<any>(null)
 
   const isMobileDevice = windowSize?.width < 768
@@ -52,16 +48,6 @@ const Header = () => {
   const handleOnMenuClick = () => {
     setMenu((prev) => !prev)
   }
-
-  // const handleOnNavlinkClick = () => {
-  //   setMenu(false)
-  // }
-
-  // const scrollToRef = (ref: any) => {
-  //   if (ref.current) {
-  //     ref.current.scrollIntoView({behavior: 'smooth'})
-  //   }
-  // }
 
   const closeSidebarOutsideClick = (event: any) => {
     console.log(!sidebarRef.current.contains(event.target), 'sidebar')
@@ -137,7 +123,7 @@ const Header = () => {
                 </div>
               ) : (
                 <div onClick={handleOnMenuClick} className='header_btn'>
-                  <IoMdClose />
+                  <IoCloseSharp />
                 </div>
               )}
             </div>

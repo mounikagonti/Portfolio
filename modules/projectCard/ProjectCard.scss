@@ -1,0 +1,207 @@
+section {
+  .projectCard_wrapper {
+    box-shadow: $box_shadow;
+    background-color: rgba(128, 128, 128, 0.187);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    h1 {
+      text-align: center;
+      font-weight: 800;
+      font-size: 30px;
+      background: linear-gradient(90deg, #0ef, #ff00ea, #fffb00);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .projectCard {
+      @include displayCenter(center, center);
+      gap: 20px;
+      .project_box {
+        width: 100%;
+        height: 350px;
+        border-radius: 1rem;
+        // background-color: aqua;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+        .projectImg {
+          position: absolute;
+          border-radius: 1rem;
+          object-fit: fill;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .project_info {
+        @include displayCenter(center, center);
+        // background-color: red;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+        .tech_icons {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          cursor: pointer;
+          span {
+            @include displayCenter(center, center);
+            font-size: 30px;
+            padding: 10px 10px;
+            border-radius: 30px;
+            &:hover {
+              background-color: gray;
+            }
+          }
+        }
+        .project-description {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 18px;
+        }
+        .button_wrapper {
+          @include displayCenter(center, center);
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+// section {
+//   .projectCard_wrapper {
+//     @include displayCenter(center, center);
+//     flex-direction: column;
+//     box-shadow: $box_shadow;
+//     background-color: rgba(128, 128, 128, 0.187);
+//     padding: 20px;
+//     margin-top: 30px;
+//     border-radius: 1rem;
+//     h1 {
+//       text-align: center;
+//       background: linear-gradient(90deg, #fffb00, #ff00ea, #0ef);
+//       -webkit-text-fill-color: transparent;
+//       background-clip: text;
+//       font-weight: 800;
+//       font-size: 30px;
+//     }
+
+//     .projectCard {
+//       display: flex;
+//       flex-wrap: wrap;
+//       color: white;
+//       border-radius: 1rem;
+//       width: 100%;
+//       height: 100%;
+//       padding-top: 20px;
+//       .project_box {
+//         position: relative;
+//         display: flex;
+//         border-radius: 1rem;
+//         width: 70%;
+//         height: 350px;
+//         object-fit: contain;
+//         overflow: hidden;
+//         link {
+//           border: 2px solid $brand_color;
+//           width: 100%;
+//           border-radius: 4rem;
+//         }
+//         .projectImg {
+//           position: absolute;
+//           border-radius: 1rem;
+//           object-fit: fill;
+//           transition: all 0.5s ease-in-out;
+//           cursor: pointer;
+//         }
+//         &:hover {
+//           .projectImg {
+//             transform: scale(1.1);
+//           }
+//         }
+//       }
+//       .project_info {
+//         padding: 15px;
+//         border-radius: 1rem;
+//         flex: 1;
+//         h1 {
+//           text-align: center;
+//           background: linear-gradient(
+//               260deg,
+//               #3d67ff 0%,
+//               #9773ff 50%,
+//               #efceff 80%
+//             ),
+//             #fff;
+//           -webkit-text-fill-color: transparent;
+//           background-clip: text;
+//           font-weight: 800;
+//         }
+//         .tech_icons {
+//           display: flex;
+//           gap: 10px;
+//           justify-content: center;
+//           align-items: center;
+//           margin-top: 20px;
+//           cursor: pointer;
+//           span {
+//             @include displayCenter(center, center);
+//             font-size: 30px;
+//             padding: 10px 10px;
+//             border-radius: 30px;
+//             &:hover {
+//               background-color: gray;
+//             }
+//           }
+//         }
+//         .project-description {
+//           margin-top: 20px;
+//           text-align: center;
+//           font-size: 18px;
+//         }
+//       }
+//     }
+//     .button_wrapper {
+//       display: flex;
+//       // flex-wrap: wrap;
+//       align-items: center;
+//       margin-top: -60px;
+//       gap: 20px;
+//     }
+//   }
+// }
+
+@media screen and (max-width: $md) {
+  section {
+    .projectCard_wrapper {
+      .projectCard {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  section {
+    .projectCard_wrapper {
+      .projectCard {
+        .project_info {
+          .button_wrapper {
+            flex-wrap: wrap;
+            margin-top: -50px;
+            button {
+              &:nth-child(2) {
+                margin-top: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
