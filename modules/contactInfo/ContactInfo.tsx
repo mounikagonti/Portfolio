@@ -60,15 +60,14 @@ const ContactInfo = ({id}: any) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   type FormValues = {
-    username: string
-    email: string
+    user_name: string
+    user_email: string
     message: string
   }
 
   const from = useForm<FormValues>()
   const {register, handleSubmit, formState} = from
   const {errors, isSubmitting} = formState
-
 
   const sendEmail: SubmitHandler<FormValues> = async (data: FormValues) => {
     console.log('form submit', data)
@@ -158,14 +157,14 @@ const ContactInfo = ({id}: any) => {
                     type='text'
                     placeholder='Enter your full name'
                     id='username'
-                    {...register('username', {
+                    {...register('user_name', {
                       required: {
                         value: true,
                         message: 'Full name is required',
                       },
                     })}
                   />
-                  <p className='error'>{errors.username?.message}</p>
+                  <p className='error'>{errors.user_name?.message}</p>
                 </div>
                 <div className='input_wrapper'>
                   <label htmlFor='email'>Email</label>
@@ -173,7 +172,7 @@ const ContactInfo = ({id}: any) => {
                     type='email'
                     placeholder='Enter a valid email address'
                     id='email'
-                    {...register('email', {
+                    {...register('user_email', {
                       pattern: {
                         value:
                           /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(.[^\s@]+)?$/,
@@ -199,7 +198,7 @@ const ContactInfo = ({id}: any) => {
                       },
                     })}
                   />
-                  <p className='error'>{errors.email?.message}</p>
+                  <p className='error'>{errors.user_email?.message}</p>
                 </div>
                 <div className='input_wrapper'>
                   <label htmlFor='message'>Message</label>

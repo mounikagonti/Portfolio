@@ -26,7 +26,11 @@ const About = ({id}: any) => {
             emphasis on React.js for building dynamic and responsive
             applications.
           </p>
-          <a href='/assets/mounikagonti.pdf' target='_blank' download={true}>
+          <a
+            href='/assets/Mounik_Gonti_Frontend_Fresher.pdf'
+            target='_blank'
+            download={true}
+          >
             <button className='glow-on-hover' type='button'>
               Download Resume
             </button>

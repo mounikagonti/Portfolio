@@ -13,7 +13,11 @@ const HomePage = ({id}: any) => {
             your vision legendary!. Ready to see your vision come alive?
             Let&apos;s chat!
           </p>
-          <a href='/assets/mounikagonti.pdf' target='_blank' download={true}>
+          <a
+            href='/assets/Mounik_Gonti_Frontend_Fresher.pdf'
+            target='_blank'
+            download={true}
+          >
             <button className='glow-on-hover' type='button'>
               Download Resume
             </button>
