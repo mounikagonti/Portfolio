@@ -14,7 +14,7 @@ const HomePage = ({id}: any) => {
             Let&apos;s chat!
           </p>
           <a
-            href='/assets/mounika_gonti_fullstack.pdf'
+            href='/assets/MOUNIKA_React_Resume.pdf'
             target='_blank'
             download={true}
           >
