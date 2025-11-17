@@ -27,7 +27,7 @@ const About = ({id}: any) => {
             applications.
           </p>
           <a
-            href='/assets/Mounika_Gonti_Resume (2).pdf'
+            href='/assets/Mounika_Gonti_Resume.pdf'
             target='_blank'
             download={true}
           >
