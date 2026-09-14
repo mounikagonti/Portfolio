@@ -4,7 +4,7 @@ import React, {FC} from 'react'
 import imgOne from '../../public/assets/images/linkedin (2).png'
 import imgTwo from '../../public/assets/images/wellness-retreat.png'
 import imgThree from '../../public/assets/images/pexels.png'
-import imgFour from '../../public/assets/images/walmartClone.png'
+import imgFour from '../../public/assets/images/mobile-app-presentation.png'
 import imgFive from '../../public/assets/images/gxber.png'
 import imgSix from '../../public/assets/images/wedding-landing-page.png'
 import imgSeven from '../../public/assets/images/E-product-page.png'
@@ -26,7 +26,7 @@ interface CustomComponentProps {
 const projectCardInfo = [
   {
     id: 1,
-    deployUrl: 'https://linked-in-clone-one-im7i.vercel.app/',
+    deployUrl: 'https://linked-in-clone-one-cyan.vercel.app/',
     src: imgOne,
     projectTitle: 'LinkedIn Clone',
     technologies: [
@@ -38,8 +38,8 @@ const projectCardInfo = [
       {id: 6, icons: <SiFirebase />},
     ],
     gitHubLink: 'https://github.com/mounikagonti/linkedIn-clone-one',
-    demoURL: 'https://linked-in-clone-one-im7i.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    demoURL: 'https://linked-in-clone-one-cyan.vercel.app/',
+    statement: 'This is a LinkedIn clone page built with Next.js and React.',
     description: 'LinkedIn clone with login authentication and using firebase.',
     date: '2024-07-20',
     contributors: ['Mounika Gonti'],
@@ -84,9 +84,9 @@ const projectCardInfo = [
   },
   {
     id: 4,
-    deployUrl: 'https://walmart-clone-seven.vercel.app/',
+    deployUrl: 'https://mobile-app-presentation-jjiw.vercel.app/',
     src: imgFour,
-    projectTitle: 'Walmart Clone',
+    projectTitle: 'Mobile app presentation',
     technologies: [
       {id: 1, icons: <RiNextjsLine />},
       {id: 2, icons: <RiReactjsFill />},
@@ -94,11 +94,11 @@ const projectCardInfo = [
       {id: 4, icons: <FaSass />},
       {id: 5, icons: <AiOutlineHtml5 />},
     ],
-    gitHubLink: 'https://github.com/mounikagonti/walmart-clone',
-    demoURL: 'https://walmart-clone-seven.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: 'https://github.com/mounikagonti/mobile-app-presentation',
+    demoURL: 'https://mobile-app-presentation-jjiw.vercel.app/',
+    statement: 'This is a mobile app presentation page built with Next.js and React.',
     description:
-      'Walmart clone with key functionalities to replicate the user experience of the original website.',
+      'Mobile app presentation with key functionalities to replicate the user experience of the original website.',
     date: '2024-07-20',
     contributors: ['Mounika Gonti'],
   },
