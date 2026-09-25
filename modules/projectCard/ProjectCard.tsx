@@ -1,272 +1,294 @@
-'use client'
-import Image from 'next/image'
-import React, {FC} from 'react'
-import imgOne from '../../public/assets/images/linkedin (2).png'
-import imgTwo from '../../public/assets/images/wellness-retreat.png'
-import imgThree from '../../public/assets/images/pexels.png'
-import imgFour from '../../public/assets/images/mobile-app-presentation.png'
-import imgFive from '../../public/assets/images/gxber.png'
-import imgSix from '../../public/assets/images/wedding-landing-page.png'
-import imgSeven from '../../public/assets/images/E-product-page.png'
-import imgEight from '../../public/assets/images/staking-dapp.png'
-import imgNine from '../../public/assets/images/astra.png'
-import imgTen from '../../public/assets/images/testimonial.png'
-import {RiNextjsLine} from 'react-icons/ri'
-import {RiReactjsFill} from 'react-icons/ri'
-import {TbBrandTypescript} from 'react-icons/tb'
-import {FaSass} from 'react-icons/fa'
-import {AiOutlineHtml5} from 'react-icons/ai'
-import {SiTailwindcss} from 'react-icons/si'
-import {SiFirebase} from 'react-icons/si'
+"use client";
+import Image from "next/image";
+import React, { FC } from "react";
+import imgOne from "../../public/assets/images/wrapora1.png";
+import imgTwo from "../../public/assets/images/linkedin (2).png";
+import imgThree from "../../public/assets/images/wellness-retreat.png";
+import imgFour from "../../public/assets/images/pexels.png";
+import imgFive from "../../public/assets/images/mobile-app-presentation.png";
+import imgSix from "../../public/assets/images/gxber.png";
+import imgSeven from "../../public/assets/images/wedding-landing-page.png";
+import imgEight from "../../public/assets/images/E-product-page.png";
+import imgNine from "../../public/assets/images/staking-dapp.png";
+import imgTen from "../../public/assets/images/astra.png";
+import imgEleven from "../../public/assets/images/testimonial.png";
+import { RiNextjsLine } from "react-icons/ri";
+import { RiReactjsFill } from "react-icons/ri";
+import { TbBrandTypescript } from "react-icons/tb";
+import { FaSass } from "react-icons/fa";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { SiTailwindcss } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 
 interface CustomComponentProps {
-  id: string
+  id: string;
 }
 
 const projectCardInfo = [
   {
     id: 1,
-    deployUrl: 'https://linked-in-clone-one-cyan.vercel.app/',
+    deployUrl: "https://wrapora.vercel.app/",
     src: imgOne,
-    projectTitle: 'LinkedIn Clone',
+    projectTitle: "Wrapora",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
-      {id: 6, icons: <SiFirebase />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <SiTailwindcss /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
+      { id: 6, icons: <SiFirebase /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/linkedIn-clone-one',
-    demoURL: 'https://linked-in-clone-one-cyan.vercel.app/',
-    statement: 'This is a LinkedIn clone page built with Next.js and React.',
-    description: 'LinkedIn clone with login authentication and using firebase.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+    gitHubLink: "https://github.com/mounikagonti/wrapora",
+    demoURL: "https://wrapora.vercel.app/",
+    statement: "This is a wrapora page built with Next.js and React.",
+    description: "Wrapora with login authentication and using firebase.",
+    date: "2026-09-25",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 2,
-    deployUrl: 'https://retreats-info.netlify.app/',
+    deployUrl: "https://linked-in-clone-one-cyan.vercel.app/",
     src: imgTwo,
-    projectTitle: 'Wellness Retreats',
+    projectTitle: "LinkedIn Clone",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <SiTailwindcss />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
+      { id: 6, icons: <SiFirebase /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/wellness-retreat',
-    demoURL: 'https://retreats-info.netlify.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
-    description: 'Wellness retreat landing page implemented using REST API.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+    gitHubLink: "https://github.com/mounikagonti/linkedIn-clone-one",
+    demoURL: "https://linked-in-clone-one-cyan.vercel.app/",
+    statement: "This is a LinkedIn clone page built with Next.js and React.",
+    description: "LinkedIn clone with login authentication and using firebase.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 3,
-    deployUrl: 'https://pexels-clone-rouge.vercel.app/',
+    deployUrl: "https://retreats-info.netlify.app/",
     src: imgThree,
-    projectTitle: 'Pexels Clone',
+    projectTitle: "Wellness Retreats",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <SiTailwindcss /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/pexels-clone',
-    demoURL: 'https://pexels-clone-rouge.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
-    description: 'Pexels clone implemented with search functionality.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+    gitHubLink: "https://github.com/mounikagonti/wellness-retreat",
+    demoURL: "https://retreats-info.netlify.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
+    description: "Wellness retreat landing page implemented using REST API.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 4,
-    deployUrl: 'https://mobile-app-presentation-jjiw.vercel.app/',
+    deployUrl: "https://pexels-clone-rouge.vercel.app/",
     src: imgFour,
-    projectTitle: 'Mobile app presentation',
+    projectTitle: "Pexels Clone",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/mobile-app-presentation',
-    demoURL: 'https://mobile-app-presentation-jjiw.vercel.app/',
-    statement: 'This is a mobile app presentation page built with Next.js and React.',
-    description:
-      'Mobile app presentation with key functionalities to replicate the user experience of the original website.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+    gitHubLink: "https://github.com/mounikagonti/pexels-clone",
+    demoURL: "https://pexels-clone-rouge.vercel.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
+    description: "Pexels clone implemented with search functionality.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 5,
-    deployUrl: 'https://gxber-c.netlify.app/',
+    deployUrl: "https://mobile-app-presentation-jjiw.vercel.app/",
     src: imgFive,
-    projectTitle: 'GXBER',
+    projectTitle: "Mobile app presentation",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/gxber',
-    demoURL: 'https://gxber-c.netlify.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: "https://github.com/mounikagonti/mobile-app-presentation",
+    demoURL: "https://mobile-app-presentation-jjiw.vercel.app/",
+    statement:
+      "This is a mobile app presentation page built with Next.js and React.",
     description:
-      'GXBER application with stunning animations and a fully responsive design.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "Mobile app presentation with key functionalities to replicate the user experience of the original website.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 6,
-    deployUrl: 'https://wedding-landding-page-with-nextjs-react-js.vercel.app/',
+    deployUrl: "https://gxber-c.netlify.app/",
     src: imgSix,
-    projectTitle: 'Wedding Landing Page',
+    projectTitle: "GXBER",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink:
-      'https://github.com/mounikagonti/Wedding-Landding-Page-with-nextjs-react-js.',
-    demoURL: 'https://wedding-landding-page-with-nextjs-react-js.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: "https://github.com/mounikagonti/gxber",
+    demoURL: "https://gxber-c.netlify.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
     description:
-      'A captivating wedding landing page with a fully responsive design.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "GXBER application with stunning animations and a fully responsive design.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 7,
-    deployUrl: 'https://ecommerce-product-page-eight-delta.vercel.app/',
+    deployUrl: "https://wedding-landding-page-with-nextjs-react-js.vercel.app/",
     src: imgSeven,
-    projectTitle: 'Ecommerce Product Page',
+    projectTitle: "Wedding Landing Page",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/Ecommerce-product-page',
-    demoURL: 'https://ecommerce-product-page-eight-delta.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink:
+      "https://github.com/mounikagonti/Wedding-Landding-Page-with-nextjs-react-js.",
+    demoURL: "https://wedding-landding-page-with-nextjs-react-js.vercel.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
     description:
-      'Explore fully responsive e-product page and offering a stunning visual experience.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "A captivating wedding landing page with a fully responsive design.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 8,
-    deployUrl: 'https://staking-dapp-bice.vercel.app/',
+    deployUrl: "https://ecommerce-product-page-eight-delta.vercel.app/",
     src: imgEight,
-    projectTitle: 'Staking dApp',
+    projectTitle: "Ecommerce Product Page",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/staking-dapp',
-    demoURL: 'https://staking-dapp-bice.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: "https://github.com/mounikagonti/Ecommerce-product-page",
+    demoURL: "https://ecommerce-product-page-eight-delta.vercel.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
     description:
-      'Staking dApp with robust functionality and a seamless, responsive interface for any device.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "Explore fully responsive e-product page and offering a stunning visual experience.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 9,
-    deployUrl: 'https://astra-task.netlify.app/',
+    deployUrl: "https://staking-dapp-bice.vercel.app/",
     src: imgNine,
-    projectTitle: 'Astra',
+    projectTitle: "Staking dApp",
     technologies: [
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/astra-task',
-    demoURL: 'https://astra-task.netlify.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: "https://github.com/mounikagonti/staking-dapp",
+    demoURL: "https://staking-dapp-bice.vercel.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
     description:
-      'Astra with robust functionality and a seamless, responsive interface for any device.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "Staking dApp with robust functionality and a seamless, responsive interface for any device.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
   {
     id: 10,
-    deployUrl: 'https://testimonials-grid-section-xi-six.vercel.app/',
+    deployUrl: "https://astra-task.netlify.app/",
     src: imgTen,
-    projectTitle: 'Testimonial',
+    projectTitle: "Astra",
     technologies: [
-      {id: 1, icons: <RiNextjsLine />},
-      {id: 2, icons: <RiReactjsFill />},
-      {id: 3, icons: <TbBrandTypescript />},
-      {id: 4, icons: <FaSass />},
-      {id: 5, icons: <AiOutlineHtml5 />},
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
     ],
-    gitHubLink: 'https://github.com/mounikagonti/Testimonials-grid-section',
-    demoURL: 'https://testimonials-grid-section-xi-six.vercel.app/',
-    statement: 'This is a wedding landing page built with Next.js and React.',
+    gitHubLink: "https://github.com/mounikagonti/astra-task",
+    demoURL: "https://astra-task.netlify.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
     description:
-      'A fully responsive, grid-style testimonial app that looks great on any device.',
-    date: '2024-07-20',
-    contributors: ['Mounika Gonti'],
+      "Astra with robust functionality and a seamless, responsive interface for any device.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
   },
-]
+  {
+    id: 11,
+    deployUrl: "https://testimonials-grid-section-xi-six.vercel.app/",
+    src: imgEleven,
+    projectTitle: "Testimonial",
+    technologies: [
+      { id: 1, icons: <RiNextjsLine /> },
+      { id: 2, icons: <RiReactjsFill /> },
+      { id: 3, icons: <TbBrandTypescript /> },
+      { id: 4, icons: <FaSass /> },
+      { id: 5, icons: <AiOutlineHtml5 /> },
+    ],
+    gitHubLink: "https://github.com/mounikagonti/Testimonials-grid-section",
+    demoURL: "https://testimonials-grid-section-xi-six.vercel.app/",
+    statement: "This is a wedding landing page built with Next.js and React.",
+    description:
+      "A fully responsive, grid-style testimonial app that looks great on any device.",
+    date: "2024-07-20",
+    contributors: ["Mounika Gonti"],
+  },
+];
 
-const ProjectCard: React.FC<CustomComponentProps> = ({id}) => {
+const ProjectCard: React.FC<CustomComponentProps> = ({ id }) => {
   const handleProjectClick = (url: string) => {
-    window.open(url, '_blank')
-  }
+    window.open(url, "_blank");
+  };
 
   return (
     <section>
-      <div className='container'>
-        <h1 className='section_title'>
+      <div className="container">
+        <h1 className="section_title">
           Latest <span> Projects</span>
         </h1>
         {projectCardInfo.map((project) => (
-          <div className='projectCard_wrapper' key={project.id} id={id}>
-            <h1 className='anta-regular'>{project.projectTitle}</h1>
-            <div className='projectCard'>
-              <div className='project_box'>
+          <div className="projectCard_wrapper" key={project.id} id={id}>
+            <h1 className="anta-regular">{project.projectTitle}</h1>
+            <div className="projectCard">
+              <div className="project_box">
                 <Image
                   onClick={() => handleProjectClick(project.deployUrl)}
-                  role='button'
+                  role="button"
                   tabIndex={0}
-                  className='projectImg'
+                  className="projectImg"
                   src={project.src}
                   alt={project.projectTitle}
                   fill
                 />
               </div>
-              <div className='project_info'>
-                <div className='tech_icons'>
+              <div className="project_info">
+                <div className="tech_icons">
                   {project.technologies.map((tech) => (
                     <span key={tech.id}>{tech.icons}</span>
                   ))}
                 </div>
-                <p className='project-description'>{project.description}</p>
-                <div className='button_wrapper'>
+                <p className="project-description">{project.description}</p>
+                <div className="button_wrapper">
                   <button
-                    className='glow-on-hover'
-                    onClick={() => window.open(project.gitHubLink, '_blank')}
+                    className="glow-on-hover"
+                    onClick={() => window.open(project.gitHubLink, "_blank")}
                   >
                     Github
                   </button>
                   <button
-                    className='glow-on-hover'
-                    onClick={() => window.open(project.demoURL, '_blank')}
+                    className="glow-on-hover"
+                    onClick={() => window.open(project.demoURL, "_blank")}
                   >
                     Demo
                   </button>
@@ -277,7 +299,7 @@ const ProjectCard: React.FC<CustomComponentProps> = ({id}) => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
