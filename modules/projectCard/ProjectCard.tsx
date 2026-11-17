@@ -47,7 +47,7 @@ const projectCardInfo = [
   },
   {
     id: 2,
-    deployUrl: "https://linked-in-clone-one-cyan.vercel.app/",
+    deployUrl: "https://linked-in-clone-one-ochre.vercel.app/",
     src: imgTwo,
     projectTitle: "LinkedIn Clone",
     technologies: [
@@ -59,7 +59,7 @@ const projectCardInfo = [
       { id: 6, icons: <SiFirebase /> },
     ],
     gitHubLink: "https://github.com/mounikagonti/linkedIn-clone-one",
-    demoURL: "https://linked-in-clone-one-cyan.vercel.app/",
+    demoURL: "https://linked-in-clone-one-ochre.vercel.app/",
     statement: "This is a LinkedIn clone page built with Next.js and React.",
     description: "LinkedIn clone with login authentication and using firebase.",
     date: "2024-07-20",
